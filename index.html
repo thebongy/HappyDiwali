@@ -18,10 +18,14 @@
         body {
             background: #AB2722;
             color: #eee;
+            overflow: hidden;
         }
         canvas {
             cursor: crosshair;
             display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
         .starter-template {
             position: absolute;
@@ -40,6 +44,8 @@
         }
         .container {
             position: relative;
+            width: 100vw;
+            height: 100vh;
         }
 
     </style>
@@ -50,7 +56,6 @@
 
 
     <main role="main" class="container">
-
         <div class="starter-template">
             <div>
                 <div style="background: #E53C26; padding: 20px;" >
@@ -61,10 +66,10 @@
                 </div>
             </div>
         </div>
-
-    <canvas id="canvas">Canvas is not supported in your browser.</canvas>
     </main>
-    <script>
+    <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+   
+   <script>
         window.requestAnimFrame = ( function() {
 	return window.requestAnimationFrame ||
 				window.webkitRequestAnimationFrame ||
